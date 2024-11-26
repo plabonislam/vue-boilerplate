@@ -16,6 +16,12 @@
     "format": "prettier --write src/",
     "prepare": "husky install"
   },
+  "lint-staged": {
+    "*.{js,ts,vue}": [
+      "npm run lint",
+      "npm run type-check"
+    ]
+  },
   "dependencies": {
     "pinia": "^2.2.6",
     "vue": "^3.5.12",
